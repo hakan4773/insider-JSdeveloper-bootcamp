@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="todo">
+    <h1>Görevler</h1>
+    <div class="todo-form">
+      <div class="form-group">
+        <label for="baslik">Baslik</label>
+        <input type="text" id="baslik" placeholder="başlık giriniz"></input>
+      </div>
+      <div class="form-group">
+        <label for="aciklama">Açıklama (Opsiyonel)</label>
+        <input type="text" id="aciklama" placeholder="aciklama giriniz"></input>
+      </div>
+      <!-- oncelik seçimi -->
+      <div class="form-group">
+        <label>Öncelik</label>
+        <div class="radio-options">
+          <div class="radio-group">
+            <input type="radio" id="dusuk" name="zorluk" value="dusuk">
+            <label for="dusuk">Düşük</label>
+          </div>
+          <div class="radio-group">
+            <input type="radio" id="orta" name="zorluk" value="orta">
+            <label for="orta">Orta</label>
+          </div>
+          <div class="radio-group">
+            <input type="radio" id="yuksek" name="zorluk" value="yuksek">
+            <label for="yuksek">Yüksek</label>
+          </div>
+
+        </div>
+      </div>
+      <!-- ekle butonu -->
+
+
+      <button id="add">Ekle</button>
+    </div>
+
+    <div class="filter-task">
+  <button id="show-completed">Tamamlananları Göster</button>
+   <!-- Önceliğe Göre Sırala -->
+  <select id="sort-priority">
+    <option value="none">Önceliğe göre sırala </option>
+    <option value="asc">Düşük → Yüksek</option>
+    <option value="desc">Yüksek → Düşük</option>
+  </select>
+    </div>
+
+    <div class="todo-list">
+
+
+
+    </div>
+
+  </div>
+
+  <script src="index.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+body {
+    padding: 20px;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(136, 127, 255);
+}
+
+.container {
+    background-color: white;
+    display: flex;
+    border: 1px solid gray;
+    border-radius: 8px;
+    flex-direction: column;
+    justify-content: center;
+     padding: 20px;
+}
+
+#studentForm {
+    margin-bottom: 20px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.form-group {
+    margin: 10px;
+
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+}
+
+input {
+    padding: 5px;
+    width: 90%;
+    border: #8b8a8a 1px solid  ;
+    border-radius: 10px;
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    width: 90%;
+    cursor: pointer;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+.student-group ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+
+}
+
+.student-group li {
+  list-style: none;
+  
+}
+.department {
+    width: 150px;
+word-wrap: break-word;
+}
+.name {
+     width: 100px;
+word-wrap: break-word; 
+}
+.grade{
+      width: 50px;
+word-wrap: break-word;
+}
+.email{
+      width: 100px;
+word-wrap: break-word;
+}
+.student-group li.delete {
+  margin-left: auto; 
+  color: red;
+  cursor: pointer;
+  padding: 5px;
+}
+.students-header {
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr 80px 1fr;
+    background: green;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px 5px 0 0;
+    font-weight: bold;
+}
+
+.student-row {
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr 80px 1fr;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    align-items: center;
+}
+
+.Students-List {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+
+    #studentForm {
+            margin: 0;
+            padding: 0px;
+            display: flex;
+        }
+  .students-header,
+  .student-row,
+  .student-group ul {
+    display: block;
+    position: relative;
+  text-align: center;
+  }
+.student-group  li {
+    margin: 10px;
+}
+  .form-group {
+    flex-direction: column;
+    align-items: flex-start;
+    
+  }
+  .department,.name,
+  .email,.grade {
+    width: 100%;
+    
+  }
+
+  label {
+    width: auto;
+  }
+
+  input, button {
+    width: 100%;
+  }
+ .student-group li.delete {
+   position:absolute;
+  color: red;
+  cursor: pointer;
+  top: 0px;
+  right: 0px;
+  font-size: 30px;
+}
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayaç</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+      <input type="number" min="1"  id="TimeInput" placeholder="süre belirle"></input>
+    <button onclick="basla()" id="startbutton" type="button">Başlat</button>
+    <button  onclick="Sıfırla()" id="finishbutton" type="button">Sıfırla</button>
+    <p id="sonucbutton"> </p>
+    
+   </div>     
+    <script>
+let timer;
+  function basla(){
+            clearInterval(timer)
+        let count = parseInt(document.getElementById("TimeInput").value);
+        let sonuc = document.querySelector("#sonucbutton");
+        if (isNaN(count) || count <= 0) {
+                alert("Lütfen geçerli bir süre girin!");
+                return;
+            }
+sonuc.innerText = count;
+       
+        timer = setInterval(()=>{
+            count --;
+
+             if (count >= 0) {
+             sonuc.innerText = count;
+             }
+               if (count === 0) {
+             clearInterval(timer);
+          sonuc.innerHTML = "<span style='color:red'>Süre doldu!</span>";
+        }
+            },1000)
+           
+
+        
+  }
+  function Sıfırla() {
+            clearInterval(timer)
+     document.querySelector("#sonucbutton").innerText = "0";;
+     document.getElementById("TimeInput").value = ""
+  }
+
+
+    </script>
+  
+
+</body>
+</html>

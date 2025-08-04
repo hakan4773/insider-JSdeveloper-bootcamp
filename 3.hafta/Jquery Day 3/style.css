@@ -1,0 +1,131 @@
+body{
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:15px
+  }
+
+.userCard {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 12px;
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+   display: flex;      
+  flex-direction: column; 
+  min-height: 300px;   
+    text-align: left;
+    background-color: #f9f9f9;
+    justify-content: space-between;
+    gap: 10px;
+    
+  }
+  .imageContainer {
+    text-align: center;
+  }
+    .userCard img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+
+
+.userInfo p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.userInfo strong {
+  color: #007bff;
+  margin-right: 6px;
+}
+
+.userInfo i {
+  margin-right: 6px;
+  color: #c20f0f;
+}
+
+.viewButton{
+ margin-top: auto;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.viewButton:hover {
+  background-color: #0056b3;
+}
+.fancyContent{
+border: 1px solid;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    margin: 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
+    background-color: #f9f9f9;
+    gap: 10px;
+}
+.fancyContent img{
+      width: 150px;
+       height: 150px;
+        border-radius: 50%; 
+        object-fit: cover;
+         margin-bottom: 15px;
+}
+.fancyContent p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.fancyContent strong {
+  color: #007bff;
+  margin-right: 6px;
+}
+
+.fancyContent i {
+  margin-right: 6px;
+  color: #c20f0f;
+}
+
+
+
+.slider {
+  margin: 30px auto;
+  max-width: 1000px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.sliderItem {
+  text-align: center;
+}
+
+.sliderItem img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.sliderItem img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+

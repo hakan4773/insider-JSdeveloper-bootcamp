@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #28435e;
+}
+
+#TimeInput {
+    border-radius: 8px;
+    border: solid 1px #dee2e6;
+    padding: 10px;
+box-shadow: 0 4px 8px rgba(158, 141, 141, 0.1);
+    color: blue;
+}
+
+#startbutton {
+        border-radius: 8px;
+    border: solid 1px #dee2e6;
+    padding: 10px;
+    background-color: rgb(56, 144, 226);
+box-shadow: 0 4px 8px rgba(158, 141, 141, 0.1);
+    color: white;
+    font-size: 1rem;
+
+}
+
+#startbutton:hover {
+    background-color: rgb(24, 95, 146);
+   cursor: pointer;
+
+}
+
+#finishbutton {
+    padding: 10px ;
+    background-color: rgb(247, 72, 72);
+    box-shadow: 0 4px 8px rgba(158, 141, 141, 0.1);
+    color: white;
+ 
+    border-radius: 8px;
+    border: solid 1px #dee2e6;
+    font-size: 1rem;
+}
+
+#finishbutton:hover {
+    background-color: rgb(201, 35, 35);
+   cursor: pointer;
+}
+
+p {
+    font-size: 2.5rem;
+    color: white;
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Öğrenci Listesi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+   
+   <div class="container">
+<h1>Student List</h1>
+
+<div id="studentForm">
+  <div class="form-group">
+    <label for="name">Ad Soyad:</label>
+    <input type="text" id="name" required>
+  </div>
+  <div class="form-group">
+    <label for="department">Bölüm:</label>
+    <input type="text" id="department" required>
+  </div>
+  <div class="form-group">
+    <label for="grade">Sınıf:</label>
+    <input type="number" id="grade" required>
+  </div>
+  <div class="form-group">
+    <label for="email">E-posta:</label>
+    <input type="email" id="email" required>
+  </div>
+  <button id="add-button" type="submit">Öğrenci Ekle</button>
+</div>
+
+<div class="Students-List">
+  <div class="students-header">
+    <div>No</div>
+    <div>Ad Soyad</div>
+    <div>Bölüm</div>
+    <div>Sınıf</div>
+    <div>E-posta</div>
+  </div>
+
+</div>
+
+</div>
+   
+   
+   
+   
+   
+   <script> 
+   
+     const studentData = [
+            {
+                "name": "Ahmet Yılmaz",
+                "department": "Bilgisayar Mühendisliği",
+                "grade": 3,
+                "email": "ahmet@example.com"
+            },
+            {
+                "name": "Ayşe Kaya",
+                "department": "Elektrik-Elektronik Mühendisliği",
+                "grade": 2,
+                "email": "ayse@example.com"
+            },
+            {
+                "name": "Mehmet Demir",
+                "department": "Makine Mühendisliği",
+                "grade": 4,
+                "email": "mehmet@example.com"
+            }
+        ];
+    //Listeleme
+    function listStudent(){
+        const students=document.querySelector(".Students-List");
+         let count=0;
+         
+         const oldEntries = document.querySelectorAll(".student-group");
+        oldEntries.forEach(el => el.remove());
+
+
+        studentData.forEach(element => {
+            const studentList=document.createElement("div")
+            studentList.classList.add("student-group");    
+            count++;        
+     studentList.innerHTML=`<ul>
+      <li class="id">${count}</li>
+      <li class="name">${element.name}</li>
+      <li class="department">${element.department}</li>
+      <li class="grade">${element.grade}</li>
+      <li class="email">${element.email}</li>
+      <li id="delete" class="delete fa fa-trash"></li>
+      
+      </ul>`
+
+      students.appendChild(studentList)
+      
+        });
+        
+      }
+      listStudent();
+
+//Yeni öğrenci ekleme
+  $("#add-button").click(function (e) {
+
+    const name = $("#name").val().trim();
+    const department = $("#department").val().trim();
+    const grade = parseInt($("#grade").val().trim());
+    const email = $("#email").val().trim();
+
+    if (!name || !department || !grade || !email) {
+      alert("Lütfen tüm alanları doldurun.");
+      return;
+    }
+  const newStudent = {
+      name,
+      department,
+      grade,
+      email
+    };
+    studentData.push(newStudent);
+    listStudent();
+
+    $("#studentForm")[0].reset();
+
+})
+
+//Öğrenci silme
+$(document).on("click",".delete",function(){
+$(this).closest(".student-group").remove();
+})
+
+//Etkileşimler 
+$(document).on("click",".student-group",function(){
+$(this).css("background-color","green ");
+$(this).css("color","white");
+})
+
+
+
+    </script>
+
+</html>
